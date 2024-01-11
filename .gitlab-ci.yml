@@ -1,0 +1,14 @@
+# Deploy stage
+deploy:
+  stage: deploy
+  script:
+    - mkdir -p /var/www/html/demo7/wintersturkeys
+    - cp -r * /var/www/html/demo7/wintersturkeys # Copy the built files to the web server
+    - cp -r /var/www/html/demo7/wintersturkeys/env/* /var/www/html/demo7/wintersturkeys/
+    - rm /var/www/html/demo7/wintersturkeys/dbConfig.php
+    - mv /var/www/html/demo7/wintersturkeys/env_dbConfig.php /var/www/html/demo7/wintersturkeys/dbConfig.php
+    - sudo chmod 777 -R /var/www/html/demo7/wintersturkeys/api/public/uploads/
+    - sudo chmod 777 -R /var/www/html/demo7/wintersturkeys/vendor/mpdf/vendor/mpdf/mpdf/tmp/
+  only:
+    - master # Only deploy when changes are pushed to the master branch
+

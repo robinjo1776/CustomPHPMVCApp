@@ -1,0 +1,9 @@
+{
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.29",
+        "mpdf/mpdf": "^6.1"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.10"
+    }
+}

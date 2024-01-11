@@ -1,0 +1,45 @@
+.well-known
+nbproject
+.idea
+src/nbproject
+src/.idea
+.vscode
+
+#all node modules ignore
+**/bower_components/**
+**/node_modules/**
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+ ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+
+# ignore
+dbConfig.php
+api/config.php
+logData
